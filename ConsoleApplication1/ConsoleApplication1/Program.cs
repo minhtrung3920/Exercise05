@@ -17,6 +17,7 @@ namespace ConsoleApplication1
             ascii('a');
             Console.WriteLine();
             check_Upper_Lower('c');
+            change_Upper_Lower('g');
             
         }
         public static void Print_a_z()
@@ -46,7 +47,7 @@ namespace ConsoleApplication1
             {
                 if ((int)c == i)
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine("ascii code: {0}", i);
                 }
             }
         }
@@ -64,6 +65,18 @@ namespace ConsoleApplication1
                     Console.WriteLine("{0} is lower:", c);
                 }
             }
+        }
+        public static void change_Upper_Lower(char c)
+        {
+            int temp = 0;
+            for (int i = 65; i <= 122; i++)
+            {
+                if ((int)c == i)
+                {
+                    temp = 122 - i;
+                }
+            }
+            Console.WriteLine(" change to Upper: {0}", temp);
         }
      
     }
